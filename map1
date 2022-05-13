@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace::std;
+
+#define sol ' ';
+#define mur '#';
+#define perso 'O';
+
+int main(){
+    
+    int tailleX=11, tailleY=11, i,j;
+    char map[tailleX][tailleY];
+    
+    for(i=0;i<tailleX;i++){
+        for(j=0;j<tailleY;j++){
+          map[i][j]=mur;
+        }
+    }
+    
+    for(i=1;i<tailleX-1;i++){
+        for(j=1;j<tailleY-1;j++){
+          map[i][j]=sol;
+        }
+    }
+    
+    map[5][5]=perso;
+    
+    for(i=0;i<tailleX;i++){
+        for(j=0;j<tailleY;j++){
+          cout<<map[i][j]<<' ';
+        }
+        cout<<endl;
+    }
+}
